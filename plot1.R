@@ -12,5 +12,7 @@ subpower = power %>%
       filter(Date == "2007-02-01" | Date =="2007-02-02")
 
 #plot the global active power histogram
+png("plot1.png", width=480, height=480)
 hist(subpower$Global_active_power, xlab = "Global Active Power (kilowatts)",
      ylab = "Frequency", col = "Red", border = "black", main = "Global Active Power")
+dev.off()
